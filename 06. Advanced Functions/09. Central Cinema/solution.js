@@ -42,7 +42,8 @@ function solve() {
         hallName.value = '';
         ticketPrice.value = '';
 
-        if (valueMovieName.trim().length === 0 || valueHallName.trim().length === 0 || valueTicketPrice.trim().length === 0  ) {
+        if (valueMovieName.trim().length === 0 || valueHallName.trim().length === 0 ||
+            valueTicketPrice.trim().length === 0  ) {
             return 'incorrect data';
         }
 
@@ -70,7 +71,9 @@ function solve() {
         archiveUl.appendChild(movingLi);
         movingLi.getElementsByTagName('div')[0].remove();
         console.log(ticketPrice,ticketCount);
-        movingLi.getElementsByTagName('strong')[0].textContent = `Total amount: ${totalAmount.toFixed(2)}`;
+        movingLi.getElementsByTagName('strong')[0].textContent = `Total amount: ${totalAmount
+            .toFixed(2)}`;
+
         let createDeleteButton = document.createElement('button');
         createDeleteButton.addEventListener('click', onDelete);
         createDeleteButton.textContent = 'Delete';
