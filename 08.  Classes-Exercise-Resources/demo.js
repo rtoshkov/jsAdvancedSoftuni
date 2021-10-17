@@ -1,7 +1,10 @@
+let recordBook = new Map();
+let model = new Map();
+model.set('a', 2)
 
-let yourNumber = 255;
-let hexString = yourNumber.toString(16);
-console.log(hexString)
 
-
-yourNumber = parseInt(hexString, 16);
+recordBook.set('A1', model);
+// recordBook.get('A1').get(a);
+console.log(recordBook.get('A1'));
+recordBook.get('A1').set('a',3)
+console.log(recordBook.get('A1').get('a'))
